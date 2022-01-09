@@ -32,6 +32,7 @@ public class CaseMethods extends BasePage{
         Assert.assertEquals(userName, "Fatih Burak Pehlivan");
     }
 
+
     public void searchProductAndCommentDetail(){
         fillInTheBlankByXpath("//*[@class='desktopOldAutosuggestTheme-input']", "iphone");
         clickElementByXpath("//*[@class='SearchBoxOld-buttonContainer']");
