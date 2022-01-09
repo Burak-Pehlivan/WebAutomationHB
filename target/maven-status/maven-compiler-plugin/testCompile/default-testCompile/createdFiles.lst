@@ -1,0 +1,6 @@
+HepsiburadaBase\CaseMethods.class
+HepsiburadaBase\Configuration.class
+HepsiburadaBase\ExtentReportUtilities.class
+HepsiburadaBase\BasePage.class
+HepsiburadaBase\BaseTest.class
+tests\test.class

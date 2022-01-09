@@ -144,7 +144,6 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
     }
 
-
     public void waitClickableWebElementByCSS(String css) {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(css)));
     }
