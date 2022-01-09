@@ -35,10 +35,16 @@ public class CaseMethods extends BasePage{
     public void searchProductAndCommentDetail(){
         fillInTheBlankByXpath("//*[@class='desktopOldAutosuggestTheme-input']", "iphone");
         clickElementByXpath("//*[@class='SearchBoxOld-buttonContainer']");
+        scrollToElementByXpath("//*[@data-test-id='product-card-name'][text() = 'iPhone 13 128 GB' ]");
         clickElementByXpath("//*[@data-test-id='product-card-name'][text() = 'iPhone 13 128 GB' ]");
         switchToTab(1);
         scrollToElementByID("productReviewsTab");
         clickElementById("productReviewsTab");
+        if(findElementById("productReviewsTab").getText() == "Değerlendirmeler (0)"){
+            driver.get(configuration.getProperty("mainPage"));
+            waitForLoad(driver);
+            Assert.assertEquals(driver.getCurrentUrl(), configuration.getProperty("mainPage"));
+        }
         clickElementByXpath("//div[@class='paginationOverlay']/div/div[1]//*[@class='hermes-ReviewCard-module-tAGUS']");
         String stringThanks = driver.findElement(By.xpath("//div[@class='paginationOverlay']/div/div[1]//*[@class='hermes-ReviewCard-module-1ZiTv']")).getText();
         System.out.println(stringThanks);
